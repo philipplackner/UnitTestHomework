@@ -12,6 +12,25 @@ import org.junit.Assert.*
 class ExampleUnitTest {
     @Test
     fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+        val result = Homework.fib(2)
+        assertEquals(1,  result)
+    }
+
+    @Test
+    fun addition_isInCorrect() {
+        val result = Homework.fib(2)
+        assertNotEquals(2,  result)
+    }
+
+    @Test
+    fun `find odd braces returns false`(){
+        val res =  Homework.checkBraces("(pp))")
+        assertFalse(res)
+    }
+
+    @Test
+    fun `find even braces returns true`(){
+        val res = Homework.checkBraces("((DD))")
+        assertTrue(res)
     }
 }
